@@ -1,0 +1,182 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="system_tab" translate="label" sortOrder="999">
+			<label>System tab</label>
+		</tab>
+		<section id="system_section" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>All Field</label>
+			<tab>system_tab</tab>
+			<resource>Bhautik_AdminFieldDemo::config_bhautik_adminfielddemo</resource>
+			<group id="general" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>All Field</label>
+				<field id="name" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>TextField</label>
+				</field>
+				<field id="address" type="textarea" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Address</label>
+					<comment>Address</comment>
+				</field>
+				<field id="mydate" translate="label" type="date" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Date</label>
+                    <frontend_model>Bhautik\AdminFieldDemo\Block\Adminhtml\System\Config\Date</frontend_model>
+                </field>
+                <field id="slider_header_color" translate="label comment" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ColorPicker</label>
+                    <frontend_model>Bhautik\AdminFieldDemo\Block\System\ColorPicker</frontend_model>
+                    <comment>Default is #F58C12</comment> 
+                </field>
+                <field id="checkbox" translate="label" sortOrder="350" showInDefault="1" showInWebsite="1" showInStore="0">
+				   <label>Checkbox</label>
+				   <frontend_model>Bhautik\AdminFieldDemo\Block\System\Config\Checkbox</frontend_model>
+				</field>
+				<field id="upload_image_id" translate="label comment" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+				    <label>Select Image</label>
+				    <backend_model>Bhautik\AdminFieldDemo\Model\Config\Backend\Image</backend_model>
+				    <base_url type="media" scope_info="1">system_image</base_url>
+				</field>
+				<field id="link" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+				    <label>Click here to see this page[Links]</label>
+				    <frontend_model>Bhautik\AdminFieldDemo\Block\Adminhtml\System\Config\Form\Field\Link</frontend_model>
+				</field>
+				<field id='magenest_password' translate='label' type='obscure' sortOrder='3' showInDefault='1' showInWebsite='1' showInStore='1'>
+				   <label>Password</label>   <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+				</field>
+				<field id="grid_view" translate="label_comment" type="editor" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+				    <label>Grid View</label> 
+    				<frontend_model>Bhautik\AdminFieldDemo\Block\Adminhtml\System\Config\Form\Field\Editor</frontend_model>
+				</field>
+				<field id="field_id" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>CLick to redirect Google page</label>
+                    <frontend_model>Bhautik\AdminFieldDemo\Block\Adminhtml\System\Config\Button</frontend_model>
+                </field>
+			</group>
+			<group id="cms_page" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>CMS Page</label>
+				<field id="cms_pages" translate="label" type="multiselect" sortOrder="50" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>CMS Pages</label>
+                    <source_model>\Magento\Cms\Model\Config\Source\Page</source_model>
+                </field>
+                <field id="theme" translate="label" type="multiselect" sortOrder="50" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Theme</label>
+                    <source_model>\Magento\Cms\Model\Page\Source\Theme</source_model>
+                </field>
+			</group>
+			<group id="cms_block" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>CMS Block</label>
+				<field id="category_static_block" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Category Static Block</label>
+					<comment>Category Static Block</comment>
+					<source_model>Magento\Catalog\Model\Category\Attribute\Source\Page</source_model>
+				</field>	
+			</group>
+			<group id="Product" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Product Configuration</label>
+				<field id="productlist" translate="label" type="multiselect" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>All Product with Name/Sku</label>
+    				<source_model>Bhautik\AdminFieldDemo\Model\Config\Productlist</source_model>
+				</field>
+				<field id="product_layout" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Product Layout</label>
+					<comment>Product Layout</comment>
+					<source_model>Magento\Catalog\Model\Product\Attribute\Source\Layout</source_model>
+				</field>
+				<field id="product_status" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Product Status</label>
+					<comment>Product Status</comment>
+					<source_model>Magento\Catalog\Model\Product\Attribute\Source\Status</source_model>
+				</field>
+				<field id="product_type" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Product Type</label>
+					<comment>Product Type</comment>  	
+					<source_model>Magento\Catalog\Model\Product\Type</source_model>
+				</field>
+			</group>
+			<group id="Category" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Category Configuration</label>
+				<field id="category_displaymode" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Category Display Mode</label>
+					<comment>Category Display Mode</comment>
+					<source_model>Magento\Catalog\Model\Category\Attribute\Source\Mode</source_model>
+				</field>
+				<field id="category_sortby" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Category Sort By</label>
+					<comment>Category Sore By</comment>
+					<source_model>Magento\Catalog\Model\Category\Attribute\Source\Sortby</source_model>
+				</field>
+				<field id="latest_category" translate="label" type="multiselect" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>New Product Category</label>
+                    <source_model>Bhautik\AdminFieldDemo\Model\Config\Source\Categorylist</source_model>
+                </field>
+                <field id="page_layout" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Category Page Layout</label>
+					<comment>Category page Layout</comment>
+					<source_model>Magento\Catalog\Model\Category\Attribute\Source\Layout</source_model>
+				</field>
+			</group>	
+			<group id="order_configuration" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Order Configuration</label>
+				<field id="order_status_planned_to_ship" translate="label" type="multiselect" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+       				<label>Order Statuses</label>
+       				<source_model>Magento\Sales\Model\Config\Source\Order\Status</source_model>
+				</field>
+			</group>
+			<group id="custom_creation" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Custom Creation</label>
+				<field id="crud_demo" type="multiselect" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Crud Test</label>
+					<comment>Crud Test</comment>
+					<source_model>Bhautik\AdminFieldDemo\Model\Config\Source\CrudDemo</source_model>
+				</field>
+			</group>
+			<group id="customer_configuration" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Customer Configuration</label>
+				<field id="currency" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Currency </label>
+					<comment>Currency</comment>
+					<source_model>Magento\Config\Model\Config\Source\Locale\Currency</source_model>
+				</field>
+				<field id="countries" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>countries</label>
+					<comment>countries</comment>
+					<source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+				</field>
+				<field id="customer_group" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Customer Group</label>
+					<comment>Customer Group</comment>
+					<source_model>Magento\Customer\Model\Customer\Attribute\Source\Group</source_model>
+				</field>
+			</group>	
+			<group id="common" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Common</label>
+				<field id="stores" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Store</label>
+					<comment>Store</comment>
+					<source_model>Magento\Config\Model\Config\Source\Store</source_model>
+				</field>
+				<field id="yes_no" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Yes / No</label>
+					<comment>Yes / No</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="enable_disable" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Enable / Disable</label>
+					<comment>Enable / Disable</comment>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="website" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>website</label>
+					<comment>website</comment>
+					<source_model>Magento\Config\Model\Config\Source\Website</source_model>
+				</field>
+				<field id="no_optional_required" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>No / Optional / Required</label>
+					<comment>No / Optional / Required</comment>
+					<source_model>Magento\Config\Model\Config\Source\Nooptreq</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

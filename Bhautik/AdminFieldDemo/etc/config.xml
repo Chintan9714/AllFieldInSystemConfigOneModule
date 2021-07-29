@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<system_section>
+			<system_group>
+				<name>chintan</name>
+				<address>address</address>
+				<page_layout>Page Layout</page_layout>
+				<crud_demo>Crud Test</crud_demo>
+				<stores>Store</stores>
+				<yes_no>Yes / No</yes_no>
+				<enable_disable>Enable / Disable</enable_disable>
+				<website>website</website>
+				<no_optional_required>No / Optional / Required</no_optional_required>
+				<email_template>Email Template</email_template>
+				<currency>Currency</currency>
+				<countries>countries</countries>
+				<category_displaymode>Category Display Mode</category_displaymode>
+				<category_static_block>Category Static Block</category_static_block>
+				<category_sortby>Category Sort By</category_sortby>
+				<product_layout>Product Layout</product_layout>
+				<product_status>Product Status</product_status>
+				<customer_group>Customer Group</customer_group>
+			</system_group>
+		</system_section>
+	</default>
+</config>
